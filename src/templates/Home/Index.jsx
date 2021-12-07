@@ -1,5 +1,6 @@
 import { getHomeList, getMovie } from '../../helpers/apiHelper'
-import { useEffect, useState } from 'react'
+import { useClickOut } from '../../helpers/useClickOut'
+import { useEffect, useState, useRef } from 'react'
 
 import * as Styled from './styles'
 
@@ -12,7 +13,11 @@ function App(){
 
   const [ data, setData ] = useState([])
   const [ movieData, setMovieData ] = useState(null)
-  const [ blackHeader, setBlackHeader ] = useState(false)
+  const [ isOpen, setIsOpen ] = useState(false)
+
+  const overviewRef = useRef(null)
+
+
 
   useEffect( () => {
     
@@ -39,41 +44,38 @@ function App(){
     
   }, []);
   
-  useEffect(()=>{
-    const scrollListener = ()=>{
-      if(window.scrollY > 10){
-        setBlackHeader(r => true)
-      }else{
-        setBlackHeader(r => false)
-      }
-    }
+  
 
-    window.addEventListener('scroll', scrollListener)
+  useClickOut(setIsOpen, overviewRef.current)
 
-    return ()=>{
-      window.removeEventListener('scroll', scrollListener)
-    }
-  })
+  
+  console.log('renderizou')
+
 
   return(
-
-    <Styled.Container>
-      <Header blackHeader={ blackHeader }/>
-      { movieData &&
-        <HighLightMovie item={movieData}/>
-      }
-      <Styled.Lists>
-        {
-          data.map((item, i)=>{
-            return(
-              <MovieRow key={i} title={item.title} items={item.items}/>
-          )})
+    <>
+      <Styled.Container isOpen={isOpen}>
+        
+        <Header /> 
+        { movieData &&
+          <HighLightMovie item={movieData}/>
         }
-      </Styled.Lists>
-      <Footer/>
-    </Styled.Container>
-
-
+        <Styled.Lists>
+          {
+            data.map((item, i)=>{
+              return(
+                <MovieRow key={i} title={item.title} items={item.items}/>
+            )})
+          }
+        </Styled.Lists>
+        <Footer/>
+        
+        
+      </Styled.Container>
+      
+      <Styled.OverView ref={overviewRef} isOpen={isOpen}/>
+      
+  </>
   )
 
 }

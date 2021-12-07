@@ -25,6 +25,8 @@ export const Header = styled.header`
 
 export const LogoImage = styled.a`
 
+    
+
     img{
         max-width: 120px;
     }
@@ -34,10 +36,15 @@ export const LogoImage = styled.a`
 
 export const LogoUser = styled.a`
 
-    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
 
     img{
         max-width: 40px;
+        border-radius: 3px;
+        margin-right: 5px;
     }
 
 `
