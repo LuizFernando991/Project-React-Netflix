@@ -23,7 +23,6 @@ export const Header = styled.header`
 `
 
 
-
 export const LogoImage = styled.a`
 
     img{
@@ -31,7 +30,6 @@ export const LogoImage = styled.a`
     }
 
 `
-
 
 
 export const LogoUser = styled.a`

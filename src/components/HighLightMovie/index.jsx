@@ -25,7 +25,7 @@ export const HighLightMovie = ({ item })=>{
                         {item.overview}
                     </Styled.Description>
                     <Styled.Buttons>
-                        <Styled.ButtonWatch href="#">Assistir</Styled.ButtonWatch>
+                        <Styled.ButtonWatch href="#">▶ Assistir</Styled.ButtonWatch>
                         <Styled.ButtonAddToMyList href="#">+ Minha lista</Styled.ButtonAddToMyList>
                     </Styled.Buttons>
                     <Styled.Genres>

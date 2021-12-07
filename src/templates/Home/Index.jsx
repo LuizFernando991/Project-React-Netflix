@@ -6,6 +6,7 @@ import * as Styled from './styles'
 import { MovieRow } from '../../components/MovieRow'
 import { HighLightMovie } from '../../components/HighLightMovie'
 import { Header } from '../../components/Header'
+import { Footer } from '../../components/Footer'
 
 function App(){
 
@@ -69,6 +70,7 @@ function App(){
           )})
         }
       </Styled.Lists>
+      <Footer/>
     </Styled.Container>
 
 
