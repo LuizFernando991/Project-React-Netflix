@@ -5,11 +5,13 @@ import * as Styled from './styles'
 
 import { MovieRow } from '../../components/MovieRow'
 import { HighLightMovie } from '../../components/HighLightMovie'
+import { Header } from '../../components/Header'
 
 function App(){
 
   const [ data, setData ] = useState([])
   const [ movieData, setMovieData ] = useState(null)
+  const [ blackHeader, setBlackHeader ] = useState(false)
 
   useEffect( () => {
     
@@ -36,12 +38,26 @@ function App(){
     
   }, []);
   
+  useEffect(()=>{
+    const scrollListener = ()=>{
+      if(window.scrollY > 10){
+        setBlackHeader(r => true)
+      }else{
+        setBlackHeader(r => false)
+      }
+    }
 
+    window.addEventListener('scroll', scrollListener)
+
+    return ()=>{
+      window.removeEventListener('scroll', scrollListener)
+    }
+  })
 
   return(
 
     <Styled.Container>
-
+      <Header blackHeader={ blackHeader }/>
       { movieData &&
         <HighLightMovie item={movieData}/>
       }
