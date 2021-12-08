@@ -8,6 +8,10 @@ export const HighlightMoive = styled.section`
     background-position: center;
     ${({image})=> css`background-image: ${image};`}
 
+    @media(max-width: 760px){
+        height: 80vh;
+    }
+
 `
 
 export const VerticalGradient = styled.div`
@@ -35,6 +39,9 @@ export const Name = styled.div`
 
     font-size: 60px;
     font-weight: bold;
+    @media(max-width: 760px){
+        font-size: 40px;
+    }
 
 `
 
@@ -43,6 +50,9 @@ export const Info = styled.div`
     font-size: 18px;
     font-weight: bold;
     margin-top: 15px;
+    @media(max-width: 760px){
+        font-size: 16px;
+    }
 
 `
 
@@ -51,6 +61,7 @@ export const Points = styled.div`
     display: inline-block;
     color: #46d369;
     margin-right: 15px;
+    
 
 `
 
@@ -74,6 +85,11 @@ export const Description = styled.div`
     font-size: 20px;
     color: #999;
     max-width: 40%;
+    @media(max-width: 760px){
+        font-size: 14px;
+        max-width: 100%;
+        margin-right: 30px;
+    }
 
 `
 
@@ -93,6 +109,10 @@ export const Genres = styled.div`
     margin-top: 15px;
     font-size: 18px;
     color: #999;
+    @media(max-width: 760px){
+        font-size: 14px;
+        
+    }
 
 
 `
@@ -108,6 +128,10 @@ export const ButtonWatch = styled.a`
     margin-right: 10px;
     background-color: #fff;
     color: #000;
+    @media(max-width: 760px){
+        font-size: 16px;
+        
+    }
 
 `
 
@@ -122,4 +146,8 @@ export const ButtonAddToMyList = styled.a`
     margin-right: 10px;
     background-color: #333;
     color: #fff;
+    @media(max-width: 760px){
+        font-size: 16px;
+        
+    }
 `

@@ -2,6 +2,7 @@ import { getHomeList, getMovie } from '../../helpers/apiHelper'
 import { useEffect, useState } from 'react'
 
 import * as Styled from './styles'
+import loadingGif from '../../Images/lodding_icon.gif'
 
 import { MovieRow } from '../../components/MovieRow'
 import { HighLightMovie } from '../../components/HighLightMovie'
@@ -68,6 +69,12 @@ function App(){
       </Styled.Container>
       
       <OverView/>
+
+      { data.length === 0 &&
+        <Styled.Loading>
+          <img src={loadingGif} alt="Carregando" />
+        </Styled.Loading>
+      }
       
   </>
   )

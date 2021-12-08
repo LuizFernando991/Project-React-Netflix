@@ -13,8 +13,6 @@ const animateOpacity = keyframes`
 `
 
 
-
-
 export const OverViewContainer = styled.div` 
 
     width: 100%;
@@ -49,7 +47,6 @@ export const OverView = styled.div`
     `}
     
 
-
 `
 
 export const Image = styled.div`
@@ -80,6 +77,7 @@ export const VerticalGradient = styled.div`
 export const Icons = styled.div`
 
     padding-top: 10px;
-
+    width: 10px;
+    cursor: pointer;
 
 `

@@ -45,6 +45,10 @@ export const MoveRowLeft = styled.div`
     }
     ${({buttonReveal})=> css`${buttonReveal && 'opacity: 1'}`}
 
+    @media(max-width: 760px){
+        opacity: 1;
+    }
+
 `
 
 export const MoveRowRight = styled.div`
@@ -66,6 +70,10 @@ export const MoveRowRight = styled.div`
         opacity: 1;
     }
     ${({buttonReveal})=> css`${buttonReveal && 'opacity: 1'}`}
+
+    @media(max-width: 760px){
+        opacity: 1;
+    }
 
     
 
