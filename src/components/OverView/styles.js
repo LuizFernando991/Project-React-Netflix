@@ -45,6 +45,12 @@ export const OverView = styled.div`
     ${({isOpen})=> css` 
         ${!isOpen ? `display: none;` : ``}
     `}
+
+    @media(max-width: 760px){
+        font-size: 16px;
+        left: 0%;
+        
+    }
     
 
 `
@@ -88,6 +94,10 @@ export const Title = styled.h3`
     margin-bottom: 30px;
     font-size: 30px;
     margin-left: 10px;
+    @media(max-width: 760px){
+        font-size: 16px;
+        
+    }
     
     
 `
@@ -121,5 +131,9 @@ export const Description = styled.div`
     max-height: 80%;
     max-width: 80%;
     padding-bottom: 40px;
+    @media(max-width: 760px){
+        font-size: 16px;
+        
+    }
 
 `
