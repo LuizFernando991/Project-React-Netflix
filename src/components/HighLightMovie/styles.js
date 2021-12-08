@@ -105,7 +105,6 @@ export const Buttons = styled.div`
 
 export const Genres = styled.div` 
 
-    
     margin-top: 15px;
     font-size: 18px;
     color: #999;
