@@ -13,9 +13,10 @@ function App(){
 
   const [ data, setData ] = useState([])
   const [ movieData, setMovieData ] = useState(null)
-  const [ isOpen, setIsOpen ] = useState(false)
+  const [ isOpen, setIsOpen ] = useState(true)
 
   const overviewRef = useRef(null)
+ 
 
 
 
@@ -48,8 +49,6 @@ function App(){
 
   useClickOut(setIsOpen, overviewRef.current)
 
-  
-  console.log('renderizou')
 
 
   return(
@@ -70,11 +69,12 @@ function App(){
         </Styled.Lists>
         <Footer/>
         
-        
+          
       </Styled.Container>
       
-      <Styled.OverView ref={overviewRef} isOpen={isOpen}/>
-      
+      <Styled.OverViewContainer isOpen={isOpen}>
+        <Styled.OverView ref={overviewRef} isOpen={isOpen}/>
+      </Styled.OverViewContainer>
   </>
   )
 

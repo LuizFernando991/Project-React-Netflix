@@ -2,8 +2,9 @@ import { useEffect } from 'react'
 
 export const useClickOut = ( setIsOpen, Ref)=>{
 
+
+
     useEffect(() => {
-        console.log('e')
         const handleOutClick = (event)=>{
           if(!Ref.contains(event.target)){
             setIsOpen(false)
