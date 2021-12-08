@@ -33,10 +33,10 @@ export const OverView = styled.div`
 
     width: 60vh;
     height: 90vh;
-    background: red;
+    background: #111;
     z-index: 10000000;
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 35%;
     border-radius: 10px;
     
@@ -71,6 +71,7 @@ export const VerticalGradient = styled.div`
     display: flex;
     flex-direction: column;
     align-items: initial;
+    position: relative;
 
 `
 
@@ -79,5 +80,46 @@ export const Icons = styled.div`
     padding-top: 10px;
     width: 10px;
     cursor: pointer;
+
+`
+
+export const Title = styled.h3`
+    margin-top: auto;
+    margin-bottom: 30px;
+    font-size: 30px;
+    margin-left: 10px;
+    
+    
+`
+
+export const Date = styled.div` 
+
+    margin-left: 10px;
+    
+
+
+`
+
+export const Play = styled.div` 
+
+
+    font-size: 40px;
+    margin-left: 10px;
+    position: relative;
+    left: 45%;
+    top: -55%;
+    
+
+
+`
+
+
+export const Description = styled.div` 
+
+    margin-left: 10px;
+    margin-top: 10%;
+    max-height: 80%;
+    max-width: 80%;
+    padding-bottom: 40px;
 
 `

@@ -39,6 +39,7 @@ export const LogoUser = styled.a`
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
     
 
     img{
