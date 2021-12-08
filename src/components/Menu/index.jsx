@@ -1,7 +1,7 @@
 import * as Styled from './styles'
 
 import { useClickOut } from '../../helpers/useClickOut'
-import { useRef } from 'react'
+
 
 
 export const Menu = ({ isActivated, setIsActivated, LogoRef })=>{
