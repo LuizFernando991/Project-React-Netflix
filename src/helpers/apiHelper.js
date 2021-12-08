@@ -59,7 +59,7 @@ export const getHomeList = async()=>{
 }
 
 
-export const getMovie = async(movieId, type)=>{
+export const getMovie = async(movieId, type = 'tv')=>{
 
 
     let info = {}

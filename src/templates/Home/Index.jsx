@@ -1,6 +1,5 @@
 import { getHomeList, getMovie } from '../../helpers/apiHelper'
-import { useClickOut } from '../../helpers/useClickOut'
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 
 import * as Styled from './styles'
 
@@ -8,17 +7,18 @@ import { MovieRow } from '../../components/MovieRow'
 import { HighLightMovie } from '../../components/HighLightMovie'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
+import { OverView } from '../../components/OverView'
 
 function App(){
 
   const [ data, setData ] = useState([])
   const [ movieData, setMovieData ] = useState(null)
-  const [ isOpen, setIsOpen ] = useState(true)
+  
 
-  const overviewRef = useRef(null)
+  
  
 
-
+  
 
   useEffect( () => {
     
@@ -45,15 +45,10 @@ function App(){
     
   }, []);
   
-  
-
-  useClickOut(setIsOpen, overviewRef.current)
-
-
-
+  console.log('Rederizou')
   return(
     <>
-      <Styled.Container isOpen={isOpen}>
+      <Styled.Container>
         
         <Header /> 
         { movieData &&
@@ -72,9 +67,8 @@ function App(){
           
       </Styled.Container>
       
-      <Styled.OverViewContainer isOpen={isOpen}>
-        <Styled.OverView ref={overviewRef} isOpen={isOpen}/>
-      </Styled.OverViewContainer>
+      <OverView/>
+      
   </>
   )
 
