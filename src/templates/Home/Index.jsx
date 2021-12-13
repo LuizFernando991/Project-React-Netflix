@@ -46,7 +46,7 @@ function App(){
     
   }, []);
   
-  console.log('Rederizou')
+ 
   return(
     <>
       <Styled.Container>
